@@ -4,7 +4,7 @@ import Notify from './gadgets/notify'
 
 export default function header() {
   return (
-   <header className=' w-full fixed top-0 bg-componentcolor flex'>
+   <header className=' bg-light-component w-full flex justify-between'>
    <Search/>
    <div>
     

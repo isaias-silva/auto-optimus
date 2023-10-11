@@ -1,5 +1,5 @@
 import type { Config } from 'tailwindcss'
-import './src/app/globals.css';
+
 
 const config: Config = {
   content: [
@@ -7,18 +7,23 @@ const config: Config = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
- theme:{
-  extend: {
-    colors:{
-      bluecolor:'var(--blue-main)',
-     bluesecond: 'var(--blue-second)',
-      maincolor:'var(--main)',
-      componentcolor:'var(--component)',
-      bordercolor:'var(--border)',
-      textcolor:'var(--text)'
-    }
+  theme: {
+    extend: {
+      colors: {
+        light: {
+          primary: '#dfdfdf50',
+          text: '#0f0f0f90',
+          component: '#fff',
+          
+        },
+        dark: {
+          primary: '#1a202c', 
+          text: '#ffffff',
+          component:'#00000050' 
+        }
+      }
+    },
+    plugins: [],
   }
- },
-  plugins: [],
 }
 export default config
