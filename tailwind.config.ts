@@ -7,20 +7,16 @@ const config: Config = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  darkMode:'class',
   theme: {
     extend: {
       colors: {
-        light: {
-          primary: '#dfdfdf50',
-          text: '#0f0f0f90',
+        init: {
+          base: '#dfdfdf50',
+    
           component: '#fff',
           
         },
-        dark: {
-          primary: '#1a202c', 
-          text: '#ffffff',
-          component:'#00000050' 
-        }
       }
     },
     plugins: [],

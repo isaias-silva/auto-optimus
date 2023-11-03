@@ -16,6 +16,7 @@
     "@zeit/next-css": "^1.0.1",
     "css-loader": "^6.8.1",
     "next": "13.5.4",
+    "next-themes": "^0.2.1",
     "react": "^18",
     "react-dom": "^18",
     "style-loader": "^3.3.3"

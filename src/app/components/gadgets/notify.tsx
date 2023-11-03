@@ -1,7 +1,7 @@
-"use client";
 
+"use client"
 import { Notifications } from '@mui/icons-material';
-import { Avatar, Button, Divider, List, ListItem, ListItemAvatar, ListItemText, Typography } from '@mui/material'
+import { Avatar, Divider, List, ListItem, ListItemAvatar, ListItemText, Typography } from '@mui/material'
 import Link from 'next/link';
 
 import React, { useState } from 'react'
@@ -13,13 +13,13 @@ export default function Notify() {
         <>
 
 
-            <Button size='small' variant='text' className=' relative' onClick={() => setVisibleNotify(!visibleNotify)}>
-                <Notifications shapeRendering='true' className=' text-light-text' />
-            </Button>
-            {visibleNotify ? <div>
-                <List className=' bg-gray-50 absolute h-full top-10 right-0 z-50'>
+            <button  className=' rounded-lg w-12 h-12 overflow-hidden border-2 duration-300 ease-in-out hover:scale-110  hover:bg-gray-700 hover:bg-opacity-50' onClick={() => setVisibleNotify(!visibleNotify)}>
+                <Notifications  shapeRendering='true' />
+            </button>
+            {visibleNotify ? 
+                <List className=' bg-init-component absolute w-96 top-16 right-0 z-50'>
                     <Link href="/myUrl" passHref>
-                        <ListItem alignItems="flex-start">
+                        <ListItem alignItems="flex-start" className=' text-init-text'>
                             <ListItemAvatar>
                                 <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
                             </ListItemAvatar>
@@ -33,18 +33,19 @@ export default function Notify() {
                                             variant="body2"
                                             color="text.primary"
                                         >
-                                            Ali Connors
+                                           <p className=' text-init-text'> Ali Connors</p>
                                         </Typography>
-                                        {" — I'll be in your neighborhood doing errands this…"}
+                                      <p className=' text-init-text'>texto</p>
                                     </React.Fragment>
                                 }
                             />
                         </ListItem>
+              
                     </Link>
                     <Divider variant="inset" component="li" />
 
                 </List>
-            </div> : <>
+            : <>
 
             </>}
 

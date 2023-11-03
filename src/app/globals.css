@@ -7,3 +7,15 @@
 
 }
 
+
+@layer base{
+   .bg-init-component {
+        @apply dark:bg-gray-800 bg-[#fff]
+    }
+    .bg-init-base {
+        @apply dark:bg-gray-900 bg-[#dfdfdf50]
+    }
+    .text-init-text {
+        @apply dark:text-white text-gray-700
+    }
+}
