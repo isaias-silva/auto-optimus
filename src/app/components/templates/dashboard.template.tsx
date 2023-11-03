@@ -5,10 +5,9 @@ import { ThemeProvider, useTheme } from 'next-themes'
 
 
 export default function DashboardTemplate({ children }: { children: JSX.Element }) {
-    const { setTheme } = useTheme()
- 
+    
     return (
-        <ThemeProvider  enableSystem={false} attribute="class" >
+        <ThemeProvider attribute="class" >
             <Header />
             <div className={' min-w-full min-h-screen relative bg-init-base'}>
                 {children}
