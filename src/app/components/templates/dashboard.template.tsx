@@ -11,7 +11,6 @@ export default function DashboardTemplate({ children }: { children: JSX.Element 
             <Header />
             <div className={' min-w-full min-h-screen relative bg-init-base'}>
                 {children}
-
             </div>
         </ThemeProvider>
     )

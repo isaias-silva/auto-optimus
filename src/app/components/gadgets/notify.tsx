@@ -13,11 +13,13 @@ export default function Notify() {
         <>
 
 
-            <button  className=' rounded-lg w-12 h-12 overflow-hidden border-2 duration-300 ease-in-out hover:scale-110  hover:bg-gray-700 hover:bg-opacity-50' onClick={() => setVisibleNotify(!visibleNotify)}>
-                <Notifications  shapeRendering='true' />
+            <button className=' rounded-lg w-12 h-12 overflow-hidden border-2 duration-300 ease-in-out hover:scale-110  hover:bg-gray-700 hover:bg-opacity-50' onClick={() => setVisibleNotify(!visibleNotify)}>
+                <Notifications shapeRendering='true' />
             </button>
-            {visibleNotify ? 
-                <List className=' bg-init-component absolute w-96 top-16 right-0 z-50'>
+            {visibleNotify ?
+                <List onPointerLeave={() => {
+                    setVisibleNotify(false)
+                }} className=' bg-init-component absolute w-96 top-16 right-0 z-50' >
                     <Link href="/myUrl" passHref>
                         <ListItem alignItems="flex-start" className=' text-init-text'>
                             <ListItemAvatar>
@@ -33,21 +35,21 @@ export default function Notify() {
                                             variant="body2"
                                             color="text.primary"
                                         >
-                                           <p className=' text-init-text'> Ali Connors</p>
+                                            <p className=' text-init-text'> Ali Connors</p>
                                         </Typography>
-                                      <p className=' text-init-text'>texto</p>
+                                        <p className=' text-init-text'>texto</p>
                                     </React.Fragment>
                                 }
                             />
                         </ListItem>
-              
+
                     </Link>
                     <Divider variant="inset" component="li" />
 
                 </List>
-            : <>
+                : <>
 
-            </>}
+                </>}
 
         </>
     )
